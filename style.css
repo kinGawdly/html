@@ -5,14 +5,16 @@
     margin: 0;
     box-sizing: border-box; /* para que las letras no salgan de su cuadrado*/
 }
+/* se importo ese codigo para realizar el efecto 3d*/
 
+/* el body posee el color de fondo que ira en toda la pagina, seguido de una anchura de 100 viewer width (vw) y altura (height = viewer height) de 100*/
 body{
 
-    background-image: linear-gradient(lightgreen, white);
+    background-color: #F9ECED;
     width: 100vw;
     height: 100vh;
 }
-
+/* la parte de navigation posee un display flex para que el elemento sea flexible y llene los espacios disponibles, se alinean al centro */
 nav {
     display: flex;
     justify-content: space-around;
@@ -21,6 +23,7 @@ nav {
     height: 8vh;
 }
 
+/* lista de navigation, posee display flex y un gap de 3rem( medida que indica el tamaño) */
 nav ul{
     display: flex;
     list-style: none;
@@ -28,12 +31,14 @@ nav ul{
     text-decoration: none;
 }
 
+/* clase para configurar la lista con los a (home, category, contact), el font-weight determina el tamaño de la fuente*/
 nav ul li a{
     text-decoration: none;
     color: black;
     font-weight: 600;
 }
 
+/* Se configuró el boton de login con un color del background negro, letras blancas y que tenga un radio de 50px, EL PADDING ES EL ESPACIO O AREA ALREDEDOR DE UN ELEMENTO, ADEMAS EL CURSOR POINTER ES PARA QUE APAREZCA UNA MANITO AL APUNTAR EL ELEMENTO LOGIN */
 nav .login{
 
     background-color: black;
@@ -44,13 +49,28 @@ nav .login{
 
 }
 
+/* el overflow hidden oculta todo el contenido que esta afuera del box y el position relative lo mueve sin salirse de su caja y conserva sus dimensiones */
 main{
+    width: 100vw;
+    height: 92vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+/* el absolute se coloca sobre el padre ( o sea el main ) y le copia sus elementos?( se pueden reemplazar en la nueva clase, como en la clase main subscribe ; se cambio el pointer event. Se justifica los textos de una manera centrada tanto horizontal como vertical*/
+main section{
+    position: absolute;
+    top: 0;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
-    height: 92vh;
     gap: 1rem;
+    text-shadow: 2px 2px 2px black;
+    pointer-events: none;
 }
 
 main h1{
@@ -63,6 +83,7 @@ main p{
     color: white;
 }
 
+/* el box shadow permite crear una sombra debajo del texto y reemplacé el pointer event del main por el all */
 main .subscribe{
     background-color: rgba(217, 114, 4, 0.94);
     color: white;
@@ -70,4 +91,14 @@ main .subscribe{
     padding: 10px 30px;
     box-shadow: 0px 8px 15px rgba(0,0,0,0.5);
     border: none;
+    cursor: pointer;
+    pointer-events: all; /* sobre escribe lo del padre*/
 }
+
+/* incrementa o decrementa el espacio de un elemento, en este caso el 20% de 100% */
+main spline-viewer{
+
+    transform: scale(1.2);
+}
+
+

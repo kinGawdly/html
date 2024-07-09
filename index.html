@@ -1,27 +1,44 @@
-<!DOCTYPE html> <!-- se pone html:5 para que cree la base del html-->
+<!DOCTYPE html>
+<!-- se pone html:5 para que cree la base del html-->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav> <!-- nav de navigations-->
-     <h2>Demo</h2>
-     <ul>
-        <li> <a href="#">Home</a></li>
-        <li> <a href="#">Category</a> </li>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <!-- nav de navigations-->
+      <h2>Demo</h2>
+      <!-- entre menos el numero , mas GRANDE es la letra-->
+      <ul>
+        <!-- ul significa lista desordenada-->
+        <li><a href="#">Home</a></li>
+        <!-- lista que hace referencia a -->
+        <li><a href="#">Category</a></li>
         <li><a href="#">Contact</a></li>
+      </ul>
 
-     </ul> <!-- ul significa lista desordenada-->
-     <button class="login">Login</button>
+      <button class="login">Login</button>
     </nav>
     <main>
-        <h1> Create your create  3D website</h1>
-        <h1> No code</h1>
-        <p> Like and suscribe</p> <!-- p de parrafo-->
-        <button class ="subscribe">Subscribe</button>
+      <!-- main vendria siendo la parte principal de la pag-->
+      <script
+        type="module"
+        src="https://unpkg.com/@splinetool/viewer@1.8.9/build/spline-viewer.js"
+      ></script>
+      <!-- este scrip lo traje de la pagina para crear el efecto 3d: spline.design-->
+      <spline-viewer
+        url="https://prod.spline.design/spGcSNK82kFLr7H8/scene.splinecode"
+      ></spline-viewer>
+      <section>
+        <h1>Create your create 3D website</h1>
+        <h1>No code</h1>
+        <p>Like and suscribe</p>
+        <!-- p de parrafo-->
+        <button class="subscribe">Subscribe</button>
+      </section>
     </main>
-</body>
+  </body>
 </html>
