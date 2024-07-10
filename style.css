@@ -10,7 +10,7 @@
 /* el body posee el color de fondo que ira en toda la pagina, seguido de una anchura de 100 viewer width (vw) y altura (height = viewer height) de 100*/
 body{
 
-    background-color: #F9ECED;
+    background-color: #fcebed;
     width: 100vw;
     height: 100vh;
 }
@@ -98,7 +98,7 @@ main .subscribe{
 /* incrementa o decrementa el espacio de un elemento, en este caso el 20% de 100% */
 main spline-viewer{
 
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 
 
